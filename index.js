@@ -71,6 +71,17 @@ document.getElementById('total').innerHTML = total;
 
 }
 
+let bookNow = document.getElementById('bookNow');
+bookNow.addEventListener("click", function()
+{
+   let show = document.getElementById('book');
+   show.style.display ="block";
+   console.log("hello")
+   document.getElementById("mainPart").style.display ="none";
+})
+
+
+
 
 
 
