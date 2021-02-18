@@ -1,7 +1,7 @@
-let totalSum =0;
+let totalSum = 0;
 let totalSum1= 0;
 let seatNumber=0;
-let total
+let total;
 
 function ticketNumber(className,isIncrease)
 { 
@@ -70,6 +70,7 @@ document.getElementById('total').innerHTML = total;
 
 
 }
+
 
 let bookNow = document.getElementById('bookNow');
 bookNow.addEventListener("click", function()
