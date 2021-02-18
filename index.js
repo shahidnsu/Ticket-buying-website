@@ -1,5 +1,5 @@
-let totalSum = 0;
-let totalSum1= 0;
+let totalSumFirstClass = 0;
+let totalSumEconomyClass= 0;
 let seatNumber=0;
 let total;
 
@@ -20,8 +20,8 @@ if (className === 'first' && isIncrease == true)
     
     document.getElementById(className + '-input').value = seatNumber;
 
-    totalSum =   (150 *  seatNumber);
-    classType.innerText = totalSum;
+    totalSumFirstClass =   (150 *  seatNumber);
+    classType.innerText = totalSumFirstClass;
 }
 
 
@@ -32,7 +32,7 @@ else if (className === 'first' && isIncrease == false && seatNumber > 0)
     document.getElementById(className + '-input').value = seatNumber;
 
    totalSum =  (100 *  seatNumber);
-   classType.innerText = totalSum;
+   classType.innerText = totalSumFirstClass;
 }
 
 else if (className === 'economy' && isIncrease == true)
@@ -41,8 +41,8 @@ else if (className === 'economy' && isIncrease == true)
     
     document.getElementById(className + '-input').value = seatNumber;
 
-   totalSum1 =  (100 *  seatNumber);
-   classType.innerText = totalSum1;
+   totalSumEconomyClass =  (100 *  seatNumber);
+   classType.innerText = totalSumEconomyClass;
 }
 
 
@@ -54,14 +54,14 @@ else if (className === 'economy' && isIncrease == false  && seatNumber > 0)
     
     document.getElementById(className + '-input').value = seatNumber;
 
-    totalSum1 = (100 *  seatNumber);
+    totalSumEconomyClass = (100 *  seatNumber);
     console.log(totalSum1);
-    classType.innerText = totalSum1;
+    classType.innerText = totalSumEconomyClass;
 }
 
 //let subtotal = 0;
-
-let subtotal = totalSum + totalSum1;
+//setting the values of subtotal, vat and total
+let subtotal = totalSumFirstClass + totalSumEconomyClass;
 document.getElementById('subtotal').innerHTML = subtotal;
 let vat = subtotal * 0.1
 document.getElementById('vat').innerHTML = vat;
@@ -71,7 +71,7 @@ document.getElementById('total').innerHTML = total;
 
 }
 
-
+//hiding the content of the book now from
 let bookNow = document.getElementById('bookNow');
 bookNow.addEventListener("click", function()
 {
